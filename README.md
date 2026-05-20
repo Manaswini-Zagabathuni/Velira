@@ -1,4 +1,4 @@
-# Velira — Watch Over Your Loved Ones
+# Velira - Watch Over Your Loved Ones
 
 Velira is a full-stack web app that connects elderly parents with their children for remote care.
 
