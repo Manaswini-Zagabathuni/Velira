@@ -50,3 +50,4 @@ export default function SOSButton({ familyId, userId, pairedWith }) {
     </div>
   );
 }
+
