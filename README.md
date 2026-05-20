@@ -1,16 +1,16 @@
-# 🌿 Velira — Watch Over Your Loved Ones
+# Velira — Watch Over Your Loved Ones
 
 Velira is a full-stack web app that connects elderly parents with their children for remote care.
 
 ## Features
-- 💊 Smart reminders (medicine, water, meals, walks)
-- 🤍 One-tap love button (parent ↔ child)
-- 🌺 Virtual garden that grows with daily task completion
-- 📊 Health tracking (steps, BP, blood sugar, heart rate)
-- 🧠 AI health insights powered by Claude
-- 🚨 SOS emergency button with GPS
-- 📅 Doctor appointment tracker
-- 💊 Medicine cabinet
+-  Smart reminders (medicine, water, meals, walks)
+-  One-tap love button (parent ↔ child)
+-  Virtual garden that grows with daily task completion
+-  Health tracking (steps, BP, blood sugar, heart rate)
+-  AI health insights powered by Claude
+-  SOS emergency button with GPS
+-  Doctor appointment tracker
+-  Medicine cabinet
 
 ## Tech Stack
 - **Frontend**: Next.js 14 + Tailwind CSS
@@ -61,5 +61,3 @@ velira/
 1. Parent signs up → gets a 6-character pair code
 2. Child signs up → enters parent's pair code
 3. Both are now connected in real-time!
-
-Made with ❤️ by Manaswini Zagabathuni
