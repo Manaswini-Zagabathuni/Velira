@@ -110,3 +110,4 @@ export default function VirtualGarden({ completedTasks = 0, totalTasks = 0 }) {
     </div>
   );
 }
+
