@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --velira-green: #2a9669;
+  --velira-light: #f0faf5;
+  --velira-sand: #fdfaf5;
+  --velira-warm: #e2c990;
+  --velira-dark: #12402f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--velira-sand);
+  color: #1a2e1f;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+@layer components {
+  .velira-card {
+    @apply bg-white rounded-2xl border border-velira-100 shadow-sm p-6;
+  }
+
+  .velira-btn-primary {
+    @apply bg-velira-600 text-white font-body font-medium px-6 py-3 rounded-xl
+    hover:bg-velira-700 active:scale-95 transition-all duration-150;
+  }
+
+  .velira-btn-ghost {
+    @apply border border-velira-200 text-velira-700 font-body font-medium px-6 py-3 rounded-xl
+    hover:bg-velira-50 active:scale-95 transition-all duration-150;
+  }
+
+  .velira-input {
+    @apply w-full border border-velira-200 rounded-xl px-4 py-3 text-sm font-body
+    focus:outline-none focus:ring-2 focus:ring-velira-300 bg-white placeholder:text-gray-400
+    transition-all duration-150;
+  }
+
+  .mood-chip {
+    @apply flex flex-col items-center gap-1 px-4 py-3 rounded-2xl border-2 cursor-pointer
+    transition-all duration-200 select-none active:scale-95;
+  }
+
+  .mood-chip.selected {
+    @apply border-velira-500 bg-velira-50;
+  }
+
+  .mood-chip:not(.selected) {
+    @apply border-gray-200 hover:border-velira-300 hover:bg-velira-50/50;
+  }
+
+  .reminder-card {
+    @apply flex items-center gap-4 p-4 rounded-2xl border border-velira-100 bg-white
+    hover:border-velira-300 transition-all duration-200;
+  }
+
+  .garden-plant {
+    @apply transition-all duration-700 ease-in-out;
+  }
+
+  .stat-card {
+    @apply velira-card flex flex-col gap-1;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl font-body text-sm font-medium
+    text-gray-600 hover:text-velira-700 hover:bg-velira-50 transition-all duration-150;
+  }
+
+  .nav-link.active {
+    @apply text-velira-700 bg-velira-50;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #b4e6ce; border-radius: 3px; }
+
+/* Garden animations */
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+.sway { animation: sway 3s ease-in-out infinite; transform-origin: bottom center; }
+
+/* SOS button pulse */
+@keyframes sosPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(220, 38, 38, 0); }
+}
+.sos-pulse { animation: sosPulse 2s ease-in-out infinite; }
+
+/* Love tap animation */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+.heart-beat { animation: heartBeat 1s ease-in-out; }
