@@ -18,7 +18,6 @@ export default function AppointmentsPage() {
     const data = await getAppointments(familyId);
     setAppointments(data);
   };
-
   useEffect(() => { fetchAppointments(); }, [familyId]);
 
   const handleAdd = async (e) => {
